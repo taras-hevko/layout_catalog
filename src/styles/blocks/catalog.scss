@@ -1,10 +1,9 @@
 @use "../utils/variables" as *;
 
 .catalog {
-  display: flex;
-  justify-content: space-between;
-  align-content: space-between;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
 
   margin: 0 auto;
   padding: 50px 40px;
@@ -19,7 +18,6 @@
     border-radius: 5px;
     background-color: $color-white;
     border: 1px solid $color-white-f3;
-
     margin-bottom: 50px;
   }
 
@@ -30,9 +28,17 @@
     padding-top: 16px;
     padding-right: 4px;
     padding-left: 4px;
-    width: 100%;
+    width: 168px;
+    height: 140px;
 
     margin-bottom: 40px;
+    cursor: pointer;
+    transition: transform 0.4s ease-in-out;
+
+    &:hover {
+      transform: scale(1.2);
+      border: 3px solid #f3f3f3;
+    }
   }
 
   &__title {
@@ -105,6 +111,8 @@
     border-radius: 5px;
     color: $color-white-f3;
     background: $color-blue;
+    transition: color 0.4s ease-in-out,
+      background-color 0.4s ease-in-out;
     &:hover {
       background-color: $color-white;
       color: $color-blue;
