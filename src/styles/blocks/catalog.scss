@@ -29,11 +29,12 @@
     padding-top: 16px;
     padding-right: 4px;
     padding-left: 4px;
-    width: 100%;
+    width: 168px;
+    height: 140px;
 
     margin-bottom: 40px;
     cursor: pointer;
-    transition: 400ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: transform 0.4s ease-in-out;
 
     &:hover {
       transform: scale(1.2);
@@ -111,7 +112,8 @@
     border-radius: 5px;
     color: $color-white-f3;
     background: $color-blue;
-    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: color 0.4s ease-in-out,
+      background-color 0.4s ease-in-out;
     &:hover {
       background-color: $color-white;
       color: $color-blue;
